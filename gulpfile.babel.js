@@ -15,28 +15,28 @@ import bSync from 'browser-sync';
 const config = {
   styles: {
     src: './src/scss/**/*.{scss,sass}',
-    dest: './public/assets/css/',
+    dest: './dist/assets/css/',
   },
   scripts: {
     src: './src/js/**/*.js',
-    dest: './public/assets/js/',
+    dest: './dist/assets/js/',
   },
   images: {
     src: './src/images/**/*.{jpg,jpeg,png,svg,ico}',
-    dest: './public/assets/images/',
+    dest: './dist/assets/images/',
   },
   fonts: {
     src: './src/fonts/**/*.{woff,woff2,ttf}',
-    dest: './public/assets/fonts/',
+    dest: './dist/assets/fonts/',
   },
   html: {
     src: './src/html/**/*.html',
-    dest: './public/',
+    dest: './dist/',
   },
   public: {
-    serv: './public',
-    dist: './public/**',
-    del: './public/**',
+    serv: './dist',
+    dist: './dist/**',
+    del: './dist/**',
   },
 };
 
