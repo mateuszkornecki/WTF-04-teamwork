@@ -1,0 +1,44 @@
+{
+  "name": "pre-g4",
+  "version": "1.0.0",
+  "description": "Robert Adamczewski github homepage",
+  "main": "gulpfile.babel.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "deploy": "npm run build && npm run deploy:change && npm run deploy:copy && npm run deploy:commit",
+    "deploy:change": "git checkout gh-pages && git rm -f -r --ignore-unmatch ./\\**",
+    "deploy:copy": "git checkout master -- 'dist/\\**' && git mv -f dist/\\** ./",
+    "deploy:commit": "git commit . -m \"build: website deploy `date +\"%Y-%m-%d\"`\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogreyroom/pre-g4.git"
+  },
+  "author": "Robert Adamczewski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rogreyroom/issues"
+  },
+  "homepage": "https://github.com/rogreyroom/pre-g4",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
+    "browser-sync": "^2.26.7",
+    "del": "^4.1.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2"
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}

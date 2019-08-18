@@ -1,0 +1,42 @@
+/* Variables */
+
+// Google fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext');
+
+/* Sass maps - to get data from sass map use map-get($map-name, $prop-name) */
+
+// Fonts
+$fonts: (
+  ff-body: (
+    'Open Sans',
+    sans-serif,
+  ),
+  ff-header: (
+    'Open Sans',
+    sans-serif,
+  ),
+  fw-regular: 400,
+  fw-semi-bold: 600,
+  fw-italic: 400,
+  fs-base: 16px,
+  lh-base: 1.5,
+);
+
+// Media queries
+$mq: (
+  x-small: 568px,
+  small: 812px,
+  medium: 1024px,
+  large: 1200px,
+  x-large: 1440px,
+);
+
+// Colors
+$colors: (
+  c-white: #ffffff,
+  c-light-grey: #f4f4f4,
+  c-medium-grey: #eeeeee,
+  c-dark-grey: #303a40,
+  c-black: #232735,
+  c-blue-primary: #2583fa,
+);
