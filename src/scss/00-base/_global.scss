@@ -1,0 +1,24 @@
+/* Global */
+
+:root {
+  @each $property, $value in $colors {
+    --#{$property}: #{$value};
+  }
+}
+
+body {
+  font-family: map-get($fonts, ff-body);
+  font-weight: map-get($fonts, fw-regular);
+  font-size: map-get($fonts, fs-base);
+  line-height: map-get($fonts, lh-base);
+  background: var(--c-white);
+  color: var(--c-black);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: map-get($fonts, ff-header);
+  font-weight: map-get($fonts, fw-semi-bold);
+}

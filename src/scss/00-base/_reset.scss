@@ -1,0 +1,98 @@
+/**
+ * Import Normalize.css (R.A.)
+ */
+
+@import '../lib/normalize';
+
+/**
+ * Use a better box model (opinionated).
+ */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Use full height. (R.A.)
+ */
+
+html,
+body {
+  min-height: 100%;
+}
+
+/**
+ * Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+ */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+/**
+ * 1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+ * 2. Correct the odd 'em' font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp,
+pre {
+  font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier,
+    monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+* PWA setup (R.A.)
+* 1. Disable interactive elements on Safari for iOS as they are dimmed when you touch them.
+* 2. Disable default long press callouts as you may've defined a custom behaviour for a long press in PWA
+* 3. Disable text selection on UI elements such as buttons and controls.
+* 4. When using overflow: auto, iOS Safari will be scrolling it shabby and awful. 
+*    Set overflow to scroll and use this on every scrollable element: 
+*    -webkit-overflow-scrolling: touch;
+*/
+
+body {
+   -webkit-tap-highlight-color: transparent; /* 1 */
+   -webkit-touch-callout: none;              /* 2 - disable it for content websites */
+}
+
+button {
+   user-select: none; /* 3 */
+}
+
+/**
+ * Setup headings font size with rem units. (R.A.)
+ */
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.17rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.83rem;
+}
+
+h6 {
+  font-size: 0.67rem;
+}
