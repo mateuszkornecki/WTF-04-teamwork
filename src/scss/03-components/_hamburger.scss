@@ -1,0 +1,78 @@
+/* Hamburger */
+.hamburger {
+  --line-width: 22px;
+  --line-height: 2px;
+  --line-space: 6px;
+  --btn-padding: 10px;
+
+  background: transparent;
+  outline-color: var(--c-white);
+  display: flex;
+  flex-direction: column;
+  padding: var(--btn-padding);
+  width: auto;
+  border: none;
+  cursor: pointer;
+
+  &__line {
+    position: relative;
+    transform: translateY(-50%);
+  }
+
+  &__line,
+  &__line::after,
+  &__line::before {
+    display: inline-block;
+    background: var(--c-black);
+    width: var(--line-width);
+    height: var(--line-height);
+  }
+
+  &__line::after,
+  &__line::before {
+    content: '';
+    position: absolute;
+    left: 0;
+  }
+
+  &__line::after {
+    top: var(--line-space);
+  }
+  &__line::before {
+    bottom: var(--line-space);
+  }
+
+  &:hover &__line,
+  &:hover &__line::after,
+  &:hover &__line::before,
+  &:focus &__line,
+  &:focus &__line::after,
+  &:focus &__line::before,
+  &:active &__line,
+  &:active &__line::after,
+  &:active &__line::before {
+    background: var(--c-blue-primary);
+  }
+
+  &--close &__line {
+    transform: rotate(45deg);
+  }
+
+  &--close &__line::after {
+    transform: rotate(90deg);
+    top: 0;
+  }
+
+  &--close &__line::before {
+    opacity: 0;
+  }
+
+  &--close:hover &__line,
+  &--close:hover &__line::after,
+  &--close:focus &__line,
+  &--close:focus &__line::after,
+  &--close:active &__line,
+  &--close:active &__line::after {
+    background: var(--c-blue-primary);
+  }
+}
