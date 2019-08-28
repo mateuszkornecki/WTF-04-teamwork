@@ -1,2 +1,35 @@
 /* Page body layout */
 
+.about-work {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: $c-blue-primary;
+  background-image: url('/assets/images/astronaut-11080.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: $c-white;
+  width: 100%;
+  text-align: center;
+
+  &__container {
+    margin: 0 auto;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__description {
+    color: $c-white;
+    text-align: center;
+  }
+
+  &__heading {
+    color: $c-white;
+    text-align: center;
+  }
+}
