@@ -6,12 +6,12 @@
 }
 
 .header {
-  background: #2583fa;
+  background: map-get($colors, c-blue-primary);
   background-image: url('/assets/images/astronaut-11080.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  color: #fff;
+  color: map-get($colors, c-white);
   width: 100%;
   text-align: center;
 
@@ -31,6 +31,7 @@
     margin: 0;
   }
 
-  //   &__image {
-  //   }
+  &__image {
+    // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
 }
