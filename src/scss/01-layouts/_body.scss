@@ -5,6 +5,39 @@
   flex-direction: column;
 }
 
+.article {
+  color: map-get($colors, c-black);
+  &__container {
+    margin: 1rem auto;
+    width: 415px;
+  }
+  &__header {
+    text-align: center;
+  }
+
+  &__image {
+    max-height: 313px;
+    max-width: 513px;
+    float: right;
+  }
+  &__wrapper {
+    border: 0.25rem solid red;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    height: 200px;
+  }
+
+  &__article__second-paragraph {
+    width: 75%;
+    flex-grow: 5;
+  }
+}
+
+.div {
+  flex-grow: 5;
+}
+
 .header {
   background: map-get($colors, c-blue-primary);
   background-image: url('/assets/images/astronaut-11080.png');
@@ -29,9 +62,5 @@
 
   &__heading {
     margin: 0;
-  }
-
-  &__image {
-    // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 }
